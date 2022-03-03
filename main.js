@@ -2,12 +2,12 @@
 //declare variables and stuff here:
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
-car_width = 100;
+car_width = 120;
 car_height = 50;
 car1_x = 10;
 car1_y = 10;
 car2_x = 10;
-car2_y = 70;
+car2_y = 100;
 background_image = "racing.jpg";
 car1_image = "car1.png";
 car2_image = "car2.png";
@@ -96,7 +96,7 @@ function right1(){
         uploadCar2();
 }
 function left1(){
-        car_x -= 10;
+        car1_x -= 10;
         uploadBackground();
         uploadCar1();
         uploadCar2();
@@ -128,10 +128,10 @@ function left2(){
 }
 //end function area
 //area for if conditions:
-if(car1_x = 700){
+if(car1_x >= 700){
     document.getElementById("winner").innerHTML = "Player 1 is the winner!"
 }
-if(car2_x = 700){
+else if(car2_x >= 700){
     document.getElementById("winner").innerHTML = "Player 2 is the winner!"
 }
 //end of if condition area
